@@ -54,6 +54,7 @@ DrawCircleGeodesic.onKeyUp = function(state, e) {
 };
 
 DrawCircleGeodesic.onStop = function() {
+  console.log('we are here!!!')
   this.updateUIClasses({ mouse: Constants.cursors.NONE });
   doubleClickZoom.enable(this);
   dragPan.enable(this);
