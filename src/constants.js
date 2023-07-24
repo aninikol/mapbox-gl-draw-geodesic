@@ -1,6 +1,9 @@
-import { modes as originalModes } from '@mapbox/mapbox-gl-draw/src/constants';
-export { cursors, geojsonTypes, events, meta, activeStates } from '@mapbox/mapbox-gl-draw/src/constants';
-
+if (typeof MapboxDraw.constants !== 'undefined') {
+    const drawConstants = await import('@mapbox/mapbox-gl-draw/src/constants');
+    export const { cursors, geojsonTypes, events, meta, activeStates } = drawConstants;
+} else {
+    export const  { cursors, geojsonTypes, events, meta, activeStates } = MapboxDraw.constants;
+}
 export const modes = {
     ...originalModes,
     DRAW_CIRCLE: 'draw_circle'
