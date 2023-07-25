@@ -12,6 +12,7 @@
   "license": "MIT",
   "repository": "github:zakjan/mapbox-gl-draw-geodesic",
   "main": "src/index.js",
+  "module": "src/index.js",
   "browser": "dist/mapbox-gl-draw-geodesic.min.js",
   "scripts": {
     "build": "rimraf dist && rollup -c",
