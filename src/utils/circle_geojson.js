@@ -1,4 +1,4 @@
-import hat from 'hat';
+//import hat from 'hat';
 import * as Constants from '../constants';
 
 export function createCircle(center, radius, properties = {}) {

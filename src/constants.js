@@ -4,12 +4,13 @@
 } else {
     export const  { cursors, geojsonTypes, events, meta, activeStates } = MapboxDraw.constants;
 }*/
+export const { cursors, geojsonTypes, events, meta, activeStates } = MapboxDraw.constants;
 console.log(MapboxDraw.modes);
 let originalModes = MapboxDraw.modes;
-(async () => {
+/*(async () => {
     //  Modes = await import(MapboxDraw.constants);
     export const { cursors, geojsonTypes, events, meta, activeStates } = MapboxDraw.constants;
-}) ();
+}) ();*/
 
 export const modes = {
     ...originalModes,
