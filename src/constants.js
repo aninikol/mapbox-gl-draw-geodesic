@@ -1,16 +1,12 @@
-/*if (typeof MapboxDraw.constants !== 'undefined') {
-    const drawConstants = await import('@mapbox/mapbox-gl-draw/src/constants');
-    export const { cursors, geojsonTypes, events, meta, activeStates } = drawConstants;
+import MapboxDraw from '@mapbox/mapbox-gl-draw';
+const originalModes = MapboxDraw.modes;
+var drawConstants;
+if (typeof MapboxDraw.constants !== 'undefined') {
+    drawConstants = MapboxDraw.constants
 } else {
-    export const  { cursors, geojsonTypes, events, meta, activeStates } = MapboxDraw.constants;
-}*/
-export const { cursors, geojsonTypes, events, meta, activeStates } = MapboxDraw.constants;
-console.log(MapboxDraw.modes);
-let originalModes = MapboxDraw.modes;
-/*(async () => {
-    //  Modes = await import(MapboxDraw.constants);
-    export const { cursors, geojsonTypes, events, meta, activeStates } = MapboxDraw.constants;
-}) ();*/
+    drawConstants = await import('@mapbox/mapbox-gl-draw/src/constants');
+}
+export const { cursors, geojsonTypes, events, meta, activeStates } = drawConstants;
 
 export const modes = {
     ...originalModes,

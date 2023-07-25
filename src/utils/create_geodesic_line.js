@@ -1,4 +1,4 @@
-//import arc from 'arc';
+import arc from 'arc';
 import * as Constants from '../constants';
 
 function coordinatesEqual(x, y) {
